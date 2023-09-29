@@ -1,31 +1,27 @@
 # DNS_Zone_Copy
-A synchronization script that allows a primary Windows Active Directory connected DNS's zones to be copied to a workgroup secondary DNS server
+This is a synchronization script that allows a primary Windows Active
+Directory connected DNS's zones to be copied to a workgroup secondary
+DNS server.
 
-Description:
-    This is a synchronization script that allows a primary Windows Active
-    Directory connected DNS's zones to be copied to a workgroup secondary
-    DNS server.
-
-    User defined variables:
-        Enter the IP address for your DNS servers
-            $primaryDnsServer
-            $secondaryDnsServer
-
-    Run this from a Domain joined workstation as Administrator,your
-    administrative elevation acocunt should, at least, be a member of the
-    domain DnsAdmins group.
+User defined variables:
+    Enter the IP address for your DNS servers
+        $primaryDnsServer
+        $secondaryDnsServer
+Run this from a Domain joined workstation as Administrator,your
+administrative elevation acocunt should, at least, be a member of the
+domain DnsAdmins group.
     
-    You will be prompted for the credentials of the
-    secondary DNS server.  Use a local account that belongs to the Administrators
-    group.
+You will be prompted for the credentials of the
+secondary DNS server.  Use a local account that belongs to the Administrators
+group.
     
-    Provide the credentials in the following format: servername\username
+Provide the credentials in the following format: servername\username
     Example: dnssec1\dnszsync
 
-    For each zone you will be presented with the added or skipped message as well
-    as a Zone Creation Totals count
+For each zone you will be presented with the added or skipped message as well
+as a Zone Creation Totals count
 
-    Note: This script will only copy primary zones.
+Note: This script will only copy primary zones.
 
 Version History:
     09/28/23 0.1 -  Created initial script
